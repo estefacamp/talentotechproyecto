@@ -652,7 +652,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="tel
 
 @media 
 (max-width: 480px) {
-#hero h3 {
+#hero h3  {
 font-size: 1em;
 }
 .contenedor-items {
@@ -662,9 +662,22 @@ grid-template-columns: 1fr;
 .contenedor .contenedor-items {
     grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
 }
+.offers{
+    overflow: hidden;
+    gap: 10px;
+}
+.offer {
+    width: 100%; /* Asegura que las ofertas ocupen todo el ancho */
+    height: auto; /* Ajuste automático de altura */
+}
+
+
 /* tablet */
 @media (min-width: 768px) 
 {
+    .offers{
+        overflow: hidden;
+    }
 body {
 font-size: 1.125rem; /* Aumentar un poco el tamaño de fuente */
 }
