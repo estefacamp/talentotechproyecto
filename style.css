@@ -1,0 +1,716 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Titillium+Web:wght@200;300;400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+
+}
+:root {
+    --color-fondo-naranja:rgb(124, 11, 11); /* Color de fondo*/
+    --color-borde-blanco: white; /* Color del borde */
+    --color-letra-casinegro: #222; /* Color letra */
+    --color--header-casiblanco: #E3E6F3;/*color header*/
+    --color--negro:black;   
+}
+h1{
+    font-size: 3.125rem; /* 50px */
+    line-height: 4rem; /* 64px */ 
+   
+}
+h2{
+    font-size: 2.875rem; /* 46px */
+    line-height: 3.375rem; /* 54px */
+    font-family: 'Verdana', sans-serif;
+}
+/*h3{
+    font-size: 40px;
+    line-height: 44px;/
+}*/
+h4{
+    font-size: 1.25rem; /* 20px */
+}h5{
+    font-size: 1.1875rem; /* 19px */
+}h6{
+    font-size: 0.625rem; /* 10px */
+}
+p{
+    font-size: 1rem; /* 16px */
+    margin: 1rem 0 1.25rem 0; /* 15px 0 20px */
+}
+/*header start************************************************************/
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 0.625rem; /* 20px 10px */
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.06);
+    top:0rem;
+    left:0rem;
+    z-index: 10;
+    
+}
+/*logo imagen*/
+.logo{
+    max-width: 25%; 
+    height: auto; 
+    
+}
+.nbar{
+color:var(--color-letra-casinegro);
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    list-style: none;
+    padding: 0 ;
+    gap: 1.25rem; /* 20px */
+    z-index: 5;
+}
+/* estilo para los enlace */
+#navbar a {
+    color:var(--color--negro); /* cambia el color del texto de los enlaces */
+    text-decoration:none; /* eliminar subrayado */
+    font-weight: 600; /* opcion de hacer el texto en negrita */
+    font-size: 16px;
+    transition:0.3s ease;
+}
+/* cambiar el color de los enlaces al pasar el mouse */
+#navbar a:hover {
+    color:var(--color-fondo-naranja); /* cambia el color al pasar el ratón (puedes ajustar este color) */
+}
+/* ocultar el campo de búsqueda por defecto */
+#search-input {
+    display: none;
+    width: 200px;
+    padding: 5px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilo cuando el buscador está visible */
+#search-input.show {
+    display: inline-block;
+}
+
+/* Estilo para el icono de búsqueda */
+#Buscar-btn {
+    cursor: pointer;
+}
+/*seccion hero**********************************************************************************************/
+
+#hero {
+    background-color: var(--color-fondo-naranja);
+    min-height:60vh; /* Asegura que ocupe al menos toda la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem; /* Espaciado interno */
+    width: 100%;
+    box-sizing: border-box;
+    position: relative; /* Necesario para posicionamiento interno */
+    
+}
+
+/* Header Container */
+.h6-container {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 3rem;
+    color: var(--color-header-casiblanco);
+    padding: 0.2rem;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+/* Welcome Section */
+.bn {
+    color: var(--color-fondo-naranja);
+    text-shadow: 1px 1px 0 white, -1px -1px 0 white, -1px 1px 0 white, 1px -1px 0 white;
+    padding: 0.625rem;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+.tm {
+    font-size: 3.5rem;
+    color: var(--color-header-casiblanco);
+    padding: 0.625rem;
+    font-weight: 600;
+}
+/* Offers Section */.offers {
+    display: flex; /* Coloca las ofertas en fila */
+    justify-content: center; /* Centra horizontalmente las ofertas */
+    gap: 2rem; /* Espacio entre las ofertas */
+    padding: 2rem; /* Espaciado interno del contenedor */
+    background-color:transparent;
+}
+
+.offer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px; /* Ancho del óvalo */
+    height: 100px; /* Alto del óvalo */
+    background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Degradado elegante */
+    border-radius: 50px; /* Bordes redondeados para forma ovalada */
+    
+    text-align: center; /* Centra el texto */
+    padding: 1rem; /* Espaciado interno */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animación suave */
+}
+
+.offer:hover {
+    transform: translateY(-5px); /* Efecto de levitación al pasar el mouse */
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15), 
+                -6px -6px 15px rgba(255, 255, 255, 1); /* Intensifica la sombra */
+}
+
+.offer p {
+    margin: 0; /* Elimina el margen del párrafo */
+    color: #333; /* Color elegante para el texto */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    font-weight: 600; /* Negrita moderada */
+    font-family: 'Arial', sans-serif; /* Fuente limpia y profesional */
+}
+
+.ofertas {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 80%; /* Limita el ancho para dispositivos grandes */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.cien, .doscientos, .trescientos {
+    font-size: 1rem;
+    color: var(--color-header-casiblanco);
+    padding: 0.3125rem;
+    border: 0.125rem solid var(--color-header-casiblanco);
+    border-radius: 1.875rem;
+    display: inline-block;
+    transition: all 0.3s ease; /* Suaviza las transiciones */
+}
+.cien:hover, .doscientos:hover, .trescientos:hover {
+    transform: translateY(-5px); /* Levanta el elemento */
+    background-color: var(--color-fondo-naranja);
+    color: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+/* Store Title */
+.store-title h3 {
+    font-size: 4rem; /* Tamaño grande */
+    font-weight: 700; /* Negrita */
+    text-transform: uppercase; /* Todo en mayúsculas */
+    letter-spacing: 0.1rem; /* Espaciado entre letras */
+    padding: 1rem 0; /* Espaciado vertical */
+    margin: 0; /* Sin margen */
+    color: white; /* Texto blanco puro */
+    text-shadow: 
+        -2px -2px 0px #000, /* Contorno negro arriba-izquierda */
+        2px -2px 0px #000,  /* Contorno negro arriba-derecha */
+        -2px 2px 0px #000,  /* Contorno negro abajo-izquierda */
+        2px 2px 0px #000;   /* Contorno negro abajo-derecha */
+    display: inline-block; /* Ajusta el ancho del título */
+}
+
+.welcome-message h3 {
+    font-size: 3.5rem; /* Tamaño grande */
+    font-weight: 600; /* Negrita */
+    text-transform: uppercase; /* Mayúsculas */
+    letter-spacing: 0.1rem; /* Espaciado entre letras */
+    padding: 0.5rem 0; /* Espaciado vertical */
+    margin: 0; /* Sin margen */
+    color: white; /* Texto blanco */
+    text-shadow: 
+        -2px -2px 0px #ff6600, /* Contorno naranja arriba-izquierda */
+        2px -2px 0px #ff6600,  /* Contorno naranja arriba-derecha */
+        -2px 2px 0px #ff6600,  /* Contorno naranja abajo-izquierda */
+        2px 2px 0px #ff6600;   /* Contorno naranja abajo-derecha */
+    display: inline-block; /* Ajusta el ancho del texto */
+}
+
+/* Animación para el glow */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.5);
+    }
+}
+
+/* General Adjustments */
+.body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between; /* Empuja el contenido hacia arriba y el footer hacia abajo */
+}
+
+.ero {
+    color: var(--color-fondo-naranja);
+    max-width: 100%;
+    font-size: 1.5rem;
+}
+#cuotas {
+    position: absolute; /* Permite colocar el div debajo del nav */
+    top: 100%; /* Ajusta este valor según la altura del nav */
+    left: 0;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    background-color: #E3E6F3; /* Fondo opcional */
+    text-align: center;
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    z-index: 10; /* Asegura que esté encima de otros elementos */
+}
+
+/* Contenedor principal ***************************************************/
+.contenedor .contenedor-items {
+    margin-top: 1.875rem; /* Espaciado superior */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 250px)); /* Tamaño fijo de las cards */
+    gap: 1rem; /* Espacio ajustado entre las cards */
+    justify-items: center; /* Centra las cards dentro de la grid */
+    width: 100%;
+    transition: 3s;
+    justify-content: flex-end; /* Empuja las cards hacia la derecha */
+}
+/* Estilo de las cards ***********************************************/
+.contenedor .contenedor-items .item {
+    width: 230px; /* Ancho fijo para todas las cards */
+    height: 300px; /* Altura fija para las cards */
+    padding: 0; /* Eliminamos padding extra */
+    margin: 0.625rem; /* Espaciado entre las cards */
+    border: 0.0625rem solid #666; /* Borde fino */
+    border-radius: 0.625rem; /* Bordes redondeados */
+    padding: 1rem; /* Padding dentro de la card */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición suave */
+    background-color: white; /* Fondo blanco dentro de las cards */
+}
+
+/* Efecto hover para las cards */
+.contenedor .contenedor-items .item:hover {
+    box-shadow: 0 0 0.625rem #666; /* Sombra suave al hacer hover */
+    transform: scale(1.05); /* Efecto de ampliación */
+}
+
+/* Imagen dentro de la card *******************************************/
+.contenedor .contenedor-items .img-item {
+    width: 100%;
+    height: 120px; /* Altura fija para la imagen dentro de la card */
+    object-fit: contain; /* Mantiene la imagen proporcional dentro del contenedor */
+}
+
+/* Título de la card ***************************************************/
+.contenedor-items .item .titulo-item {
+    display: block;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase; /* Mayúsculas para el título */
+    margin-bottom: 0.5rem; /* Espaciado inferior */
+}
+
+/* Estilo del precio de la card ****************************************/
+.contenedor .contenedor-items .precio-item {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.375rem; /* Tamaño adecuado para el precio */
+    margin-bottom: 0.5rem; /* Espaciado inferior */
+}
+
+/* Estilo del botón dentro de la card **********************************/
+.contenedor-items .item .boton-item {
+    display: block;
+    margin: 0.625rem auto; /* Centra el botón */
+    border: none;
+    background: var(--color--negro); /* Fondo oscuro */
+    color: var(--color-borde-blanco); /* Texto blanco */
+    padding: 0.3125rem 0.9375rem; /* Padding ajustado */
+    border-radius: 0.3125rem; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+/* Tooltip dentro del botón *******************************************/
+.boton-item {
+    position: relative; /* Necesario para el tooltip */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.tooltip {
+    visibility: hidden; /* Tooltip oculto por defecto */
+    width: 75%; /* Ancho ajustado */
+    background-color: #333; /* Fondo oscuro para el tooltip */
+    color: #fff; /* Texto blanco */
+    text-align: center;
+    border-radius: 0.3125rem; /* Bordes redondeados */
+    padding: 5px; /* Espaciado dentro del tooltip */
+    position: absolute; /* Posicionamiento absoluto */
+    z-index: 1; /* Asegura que el tooltip quede sobre otros elementos */
+    bottom: 125%; /* Posiciona el tooltip por encima del botón */
+    left: 50%; /* Centra el tooltip horizontalmente */
+    margin-left: -50px; /* Ajuste para centrar */
+    opacity: 0; /* Tooltip invisible por defecto */
+    transition: opacity 0.3s; /* Transición suave */
+}
+
+.boton-item:hover .tooltip {
+    visibility: visible; /* Muestra el tooltip */
+    opacity: 1; /* Tooltip visible */
+}
+
+/*CARRITOOO*--------------------------------------------------*/
+
+.carrito {
+    width:80%;
+    height:550px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: auto; /* Centra el carrito horizontalmente */
+    display: block; /* Asegura que el carrito sea visible */
+
+}
+.carrito-items {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.carrito-items ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.carrito-items ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.carrito-items ul li span {
+    font-weight: bold;
+}
+
+.total-carrito {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.total-carrito p {
+    font-size: 1.2rem;
+}
+
+#vaciar-carrito {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#comprar-btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+/*FOOTER*******************************************************************/
+.container-footer {
+    grid-template-columns: 1fr; /* Esto hace que el footer ocupe todo el ancho de la columna */
+    width: 100%; /* Asegura que el footer ocupe todo el ancho */
+}
+footer {
+background-color: #000; /* Fondo negro */
+color: #fff; /* Texto blanco */
+text-align: center;
+padding: 0rem 0px; /* 20px 0 */
+width: 100%; /* Asegura que el footer ocupe todo el ancho de la pantalla */
+position: relative; /* Asegura que no esté limitado por márgenes */
+box-sizing: border-box;
+display: flex;
+flex-direction: column; /* Alinea los elementos de arriba hacia abajo */
+left:0rem;
+right:0rem ;
+}
+.footer-content {
+width: 100%; /* Hace que el contenido ocupe el 100% del ancho del footer */
+padding: 0 10px; /* Espaciado horizontal para evitar que el contenido se pegue a los bordes */
+text-align: center;
+}
+.footer-links {
+list-style-type: none;
+padding: 0;
+}
+.footer-links li {
+    display: inline;
+    margin: 0 0.9375rem; /* 15px */
+    gap: 20px;
+}
+.footer-links a {
+    color: #fff; /* Enlaces en blanco */
+    text-decoration: none;
+}
+/******INFORMACION HTML****************************************************/
+/* Main Section */
+/* Estilo general para el contenedor principal */
+main {
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 0 20px;
+    background-color: #fafafa; /* Fondo más claro para contraste */
+    border-radius: 12px; /* Bordes redondeados para suavizar la apariencia */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más profunda para dar una sensación de elevación */
+}
+
+/* Estilo para los encabezados */
+h1, h2 {
+    font-family: 'Verdana', sans-serif;
+    color: var(--color-fondo-naranja);
+    text-align: center;
+    text-transform: uppercase; /* Letras en mayúsculas para mayor énfasis */
+    letter-spacing: 1px; /* Espaciado entre letras para una mejor legibilidad */
+    margin-bottom: 15px; /* Espacio debajo de los títulos */
+}
+
+/* Estilo para los párrafos dentro de la sección de información */
+.informacion--p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 15px 0;
+    text-align: justify;
+    color: #333; /* Color más suave para el texto */
+    text-indent: 20px; /* Sangría en el primer párrafo para mejorar la presentación */
+}
+
+/* Estilo para los contenedores de información */
+.informacion-- {
+    background-color: #2e0303;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    line-height: 1.6;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más profunda */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agrega una transición suave */
+}
+
+/* Efecto al pasar el ratón sobre los contenedores de información */
+.informacion--:hover {
+    transform: translateY(-5px); /* Eleva el contenedor ligeramente al hacer hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Aumenta la sombra al hacer hover */
+}
+
+/* Estilo para los títulos dentro de las secciones */
+section h2 {
+    color: #2e0303;
+    font-size: 1.5em; /* Tamaño de fuente mayor para los subtítulos */
+    margin-bottom: 10px;
+    font-weight: bold; /* Negrita para resaltar más el título */
+}
+
+/* Fondo del cuerpo para una apariencia más limpia */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Fondo general más suave */
+    color: #333; /* Color de texto más suave para todo el cuerpo */
+    margin: 0;
+    padding: 0;
+}
+
+/* Agregar una sombra sutil al contenedor principal cuando no está en hover */
+main:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Ícono de WhatsApp ************************************************************************************/
+#whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+#whatsapp-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Ícono para volver al inicio *************************************************************************************/
+#back-to-home {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #b3210b;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#back-to-home:hover {
+    background-color: #b93329;
+}
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+/*ingresar******************************************************************/
+
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"] {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container input {
+    margin-right: 5px;
+}
+
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration:none; /* eliminar subrayado */
+}
+
+.register-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #7c130d;
+}
+
+.register-form {
+    display: none;
+    margin-top: 20px;
+}
+
+.register-form input {
+    margin-bottom: 10px;
+    
+}
+
+.register-form button  {
+    width: 100%;
+    padding: 10px;
+    background-color:#541107;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container button{
+    width: 100%;
+    padding: 10px;
+    background-color:#541107;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.register-form button:hover {
+    background-color: var(--color-fondo-naranja);
+}
+/*RESPONsiveE*********************************************************/
+/*  generales para móviles */
+
+@media 
+(max-width: 480px) {
+#hero h3 {
+font-size: 1em;
+}
+.contenedor-items {
+grid-template-columns: 1fr;
+}
+}
+.contenedor .contenedor-items {
+    grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+}
+/* tablet */
+@media (min-width: 768px) 
+{
+body {
+font-size: 1.125rem; /* Aumentar un poco el tamaño de fuente */
+}
+#header {
+ padding: 1.5rem; /* Ajustar padding para tablets */
+ }
+.contenedor {
+max-width: 90%; /* Más ancho en tablets */
+}
+.contenedor-items {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en tablets */
+}
+}
+/* Escritorio */
+@media (min-width: 1024px) {
+body {
+font-size: 1.25rem; /* Aumentar más para escritorio */
+align-items: center;
+}
+#header {
+padding: 2rem; /* Aumentar padding para escritorio */
+}
+.contenedor {
+max-width: 100%; /* Menos ancho en escritorio */
+}
+.contenedor-items {
+grid-template-columns: repeat(3, 1fr); /* Tres columnas en escritorio */
+}
+}
+.ero{
+color: var(--color-fondo-naranja); /* Mantener color de texto */
+max-width: 100%; /* Limitar el ancho máximo */
+} 
+/* Pantallas grandes */
+@media (min-width: 1440px) {
+body {
+font-size: 1.375rem; /* Aumentar más para pantallas grandes */
+}
+#header {
+padding: 2rem; /* Ajustar padding para pantallas grandes */
+}
+.contenedor {
+max-width: 70%; /* Menos ancho en pantallas grandes */
+}
+
+.contenedor-items {
+grid-template-columns: repeat(4, 1fr); /* Cuatro columnas en pantallas grandes */
+}
+}
